@@ -9,7 +9,7 @@
 </div>
 <script>
     async function Hero() {
-        let res = await axios.get("/ListProductSlider");
+        let res = await axios.get("/api/ListProductSlider");
         $("#carouselSection").empty();
         res.data['data'].forEach((item,i)=>{
             let activeClass=''

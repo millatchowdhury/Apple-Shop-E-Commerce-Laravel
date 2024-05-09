@@ -39,7 +39,7 @@
 </head>
 <body>
 
-<div class="preloader">
+<div class="preloader d-none">
     <div class="lds-ellipsis">
         <span></span>
         <span></span>

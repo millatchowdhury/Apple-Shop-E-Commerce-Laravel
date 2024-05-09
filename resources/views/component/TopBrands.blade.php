@@ -19,7 +19,7 @@
 <script>
     TopBrands();
     async function TopBrands(){
-        let res=await axios.get("/BrandList");
+        let res=await axios.get("/api/BrandList");
         $("#TopBrandItem").empty()
         res.data['data'].forEach((item,i)=>{
             let EachItem= `<div class="p-2 col-2">

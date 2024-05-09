@@ -30,7 +30,7 @@
         let searchParams=new URLSearchParams(window.location.search);
         let id=searchParams.get('id');
 
-        let res=await axios.get(`/ListProductByBrand/${id}`);
+        let res=await axios.get(`/api/ListProductByBrand/${id}`);
         $("#byBrandList").empty();
         res.data['data'].forEach((item,i)=>{
             let EachItem=`<div class="col-lg-3 col-md-4 col-6">

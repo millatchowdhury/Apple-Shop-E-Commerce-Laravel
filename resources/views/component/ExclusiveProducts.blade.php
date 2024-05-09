@@ -68,7 +68,7 @@
 
 
     async function Popular(){
-        let res=await axios.get("/ListProductByRemark/popular");
+        let res=await axios.get("/api/ListProductByRemark/popular");
         $("#PopularItem").empty();
         res.data['data'].forEach((item,i)=>{
             let EachItem=`<div class="col-lg-3 col-md-4 col-6">
@@ -103,7 +103,7 @@
 
 
     async function New (){
-        let res=await axios.get("/ListProductByRemark/new");
+        let res=await axios.get("/api/ListProductByRemark/new");
         $("#NewItem").empty();
         res.data['data'].forEach((item,i)=>{
             let EachItem=`<div class="col-lg-3 col-md-4 col-6">
@@ -139,7 +139,7 @@
 
 
     async function Top(){
-        let res=await axios.get("/ListProductByRemark/top");
+        let res=await axios.get("/api/ListProductByRemark/top");
         $("#TopItem").empty();
         res.data['data'].forEach((item,i)=>{
             let EachItem=`<div class="col-lg-3 col-md-4 col-6">
@@ -177,7 +177,7 @@
 
 
     async function Special(){
-        let res=await axios.get("/ListProductByRemark/special");
+        let res=await axios.get("/api/ListProductByRemark/special");
         $("#SpecialItem").empty();
 
         res.data['data'].forEach((item,i)=>{
@@ -216,7 +216,7 @@
 
 
     async function Trending(){
-        let res=await axios.get("/ListProductByRemark/trending");
+        let res=await axios.get("/api/ListProductByRemark/trending");
         $("#TrendingItem").empty();
         res.data['data'].forEach((item,i)=>{
             let EachItem=`<div class="col-lg-3 col-md-4 col-6">

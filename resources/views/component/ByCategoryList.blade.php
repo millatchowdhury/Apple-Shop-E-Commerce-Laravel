@@ -31,7 +31,7 @@
         let id=searchParams.get('id');
 
 
-        let res=await axios.get(`/ListProductByCategory/${id}`);
+        let res=await axios.get(`/api/ListProductByCategory/${id}`);
         $("#byCategoryList").empty();
         res.data['data'].forEach((item,i)=>{
             let EachItem=`<div class="col-lg-3 col-md-4 col-6">
