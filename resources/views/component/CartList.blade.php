@@ -61,7 +61,7 @@
 
 <script>
     async function CartList(){
-        let res=await axios.get(`/CartList`);
+        let res=await axios.get(`/api/CartList`);
         $("#byList").empty();
 
         res.data['data'].forEach((item,i)=>{
@@ -98,7 +98,7 @@
 
    async function RemoveCartList(id){
       $(".preloader").delay(90).fadeIn(100).removeClass('loaded');
-        let res=await axios.get("/DeleteCartList/"+id);
+        let res=await axios.get("/api/DeleteCartList/"+id);
       $(".preloader").delay(90).fadeOut(100).addClass('loaded');
         if(res.status===200) {
             await CartList();
@@ -114,7 +114,7 @@
 
         $("#paymentList").empty();
 
-        let res=await axios.get("/InvoiceCreate");
+        let res=await axios.get("/api/InvoiceCreate");
 
         $(".preloader").delay(90).fadeOut(100).addClass('loaded');
 

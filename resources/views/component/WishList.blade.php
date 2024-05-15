@@ -23,7 +23,7 @@
     <div class="container my-5">
         <div id="byList" class="row">
         </div>
-    </div>
+    </div> 
 </div>
 
 
@@ -56,7 +56,7 @@
                                             </div>
                                         </div>
                                         <button class="btn remove btn-sm my-2 btn-danger" data-id="${item['product']['id']}">Remove</button>
-
+ 
                                     </div>
                                 </div>
                             </div>`
@@ -69,12 +69,11 @@
             RemoveWishList(id);
         })
 
-
     }
 
   async function RemoveWishList(id){
       $(".preloader").delay(90).fadeIn(100).removeClass('loaded');
-        let res=await axios.get("/RemoveWishList/"+id);
+        let res=await axios.get("/api/RemoveWishList/"+id);
       $(".preloader").delay(90).fadeOut(100).addClass('loaded');
         if(res.status===200) {
             await WishList();

@@ -222,7 +222,7 @@
         else{
             $(".preloader").delay(90).fadeIn(100).removeClass('loaded');
             let postBody={description:reviewText, rating:reviewScore, product_id:id}
-            let res=await axios.post("/CreateProductReview",postBody);
+            let res=await axios.post("/api/CreateProductReview",postBody);
             $(".preloader").delay(90).fadeOut(100).addClass('loaded');
             await  productReview();
         }
