@@ -21,7 +21,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> 
 
             <div class="col-lg-6 col-md-6">
                 <div class="pr_detail">
@@ -86,7 +86,7 @@
 
 
     async function productDetails() {
-        let res = await axios.get("/ProductDetailsById/"+id);
+        let res = await axios.get("/api/ProductDetailsById/"+id);
         let Details=await res.data['data'];
 
         document.getElementById('product_img1').src=Details[0]['img1'];
@@ -172,7 +172,7 @@
             }
             else {
                 $(".preloader").delay(90).fadeIn(100).removeClass('loaded');
-                let res = await axios.post("/CreateCartList",{
+                let res = await axios.post("/api/CreateCartList",{
                     "product_id":id,
                     "color":p_color,
                     "size":p_size,
@@ -196,7 +196,7 @@
     async function AddToWishList() {
         try{
             $(".preloader").delay(90).fadeIn(100).removeClass('loaded');
-            let res = await axios.get("/CreateWishList/"+id);
+            let res = await axios.get("/api/CreateWishList/"+id);
             $(".preloader").delay(90).fadeOut(100).addClass('loaded');
             if(res.status===200){
                 alert("Request Successful")
